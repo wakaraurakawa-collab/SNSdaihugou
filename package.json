@@ -1,0 +1,21 @@
+{
+  "name": "sns-daifugo",
+  "version": "14.0.0",
+  "private": true,
+  "description": "SNS大富豪 — Vtuber事務所の箱の中で話題を奪い合う、SNS風の大富豪（1ファイルのHTMLゲーム）",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "python3 build.py",
+    "serve": "python3 -m http.server 8766 --bind 127.0.0.1",
+    "test": "node test/rules-unit.js && node test/followers-unit.js && node test/nplayers.js",
+    "sim": "node test/survival-sim.js 200 normal",
+    "shots": "node test/shot.cjs title 1280 800 && node test/shot.cjs play 390 844 && node test/shot.cjs fx 1280 800 && node test/shot.cjs long 1280 800",
+    "audit": "node test/audit.cjs 1280x800 && node test/audit.cjs 390x844"
+  },
+  "devDependencies": {
+    "@fontsource/dela-gothic-one": "^5.3.0",
+    "@fontsource/dotgothic16": "^5.3.0",
+    "@fontsource/m-plus-rounded-1c": "^5.3.0",
+    "playwright-core": "1.56"
+  }
+}
